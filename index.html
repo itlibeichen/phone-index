@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/swiper.min.js"></script>
+    <script src="../UniqueSkills/pc/jQuery/jquery-1.7.2.js"></script>
 </head>
 <body>
 <div class="box">
@@ -18,15 +19,15 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <section class="content">
-                    <div class="Battle"></div>
+                    <div class="battle" id="battle"></div>
                     <div class="top3"></div>
                     <div class="content3"></div>
                     <div class="bottom3"></div>
                 </section>
             </div>
             <div class="swiper-slide">
-                <section class="content">
-                    <div class="Battle"></div>
+                <section class="content2">
+                    <div class="battle"></div>
                     <div class="top3"></div>
                     <div class="content3"></div>
                     <div class="bottom3"></div>
@@ -44,41 +45,54 @@
     <section class="footer"></section>
 </div>
 <script>
-    function addReady(fn) {
-        //判断浏览器
-        if (document.addEventListener) {
-            //高版本浏览器dom事件 dom事件必须绑定
-            document.addEventListener('DOMContentLoaded', fn, false);
-        } else {
-            //处理低版本ie
-            document.attachEvent('onreadystatechange', function() {
-                if (document.readyState == 'complete') {
-                    fn();
-                }
-            });
-        }
-    }
-    addReady(function (){
-        document.documentElement.style.fontSize = document.documentElement.clientWidth/320*20+'px';
-        window.onresize = function (){
+        $(document).ready(function (){
             document.documentElement.style.fontSize = document.documentElement.clientWidth/320*20+'px';
-        };
-    });
-    addReady(function (){
-        var oB = document.querySelector('.Battle');
-        var oT = document.querySelector('.top3');
-        var oC = document.querySelector('.content3');
-        var oO = document.querySelector('.bottom3');
-        oB.style.AnimationName = 'test';
+            window.onresize = function (){
+                document.documentElement.style.fontSize = document.documentElement.clientWidth/320*20+'px';
+            };
+        });
+        function page1(){
+        $(document).ready(function (){
+            $('.battle').css({
+                'transition' : '1s all ease',
+                'top' : '5rem',
+                'opacity' : '1',
+            });
+            $('.top3').css({
+                'transition' : '0.3s all ease',
+                'transition-delay':'1.6s',
+                'top' : '6.65rem',
+                'left': '2.8rem',
+                'opacity' : '1',
+            });
+            $('.bottom3').css({
+                'transition' : '0.3s all ease',
+                'transition-delay':'1.6s',
+                'top' : '6.65rem',
+                'left': '2.8rem',
+                'opacity' : '1',
+            });
+            $('.content3').css({
+                'transition' : '1s all ease',
+                'transition-delay':'2.5s',
+                'opacity' : '1',
+            });
+        });
+        }
+        page1();
+        $(document).on('touchstart',function (){
+            if( mySwiper.activeIndex == 1 ){
+                page1();
+            }
+        });
+
+        var mySwiper = new Swiper ('.swiper-container', {
+            direction: 'vertical',
+            loop: true,
+        });
 
 
-    });
-    var mySwiper = new Swiper ('.swiper-container', {
-        direction: 'vertical',
-        loop: true,
-        /*// 如果需要分页器
-        pagination: '.swiper-pagination',*/
-    });
+
 </script>
 </body>
 </html>
