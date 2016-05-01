@@ -1,0 +1,9 @@
+.clearFix:after {
+    content:'';
+    display:block;
+    clear:both;
+}
+
+.clearFix{
+    zoom : 1 ;
+}

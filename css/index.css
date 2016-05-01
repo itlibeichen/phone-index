@@ -1,0 +1,123 @@
+.box {
+    width: 16rem;
+    height: 25rem;
+}
+
+.content {
+    width: 16rem;
+    height: 25rem;
+    position: relative;
+    background: url('../images/background.png') no-repeat 0 0;
+    background-size: 100%;
+}
+
+@keyframes test {
+    from {
+        opacity: 0;
+        top: 1.175rem;
+        left: 1.075rem;
+    }
+    to {
+        opacity: 1;
+        top: 5.175rem;
+        left: 5rem;
+        z-index:200;
+    }
+}
+
+/*#div1 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    top: 10px;
+}*/
+
+/*#div1:hover {
+    animation-name: test;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}*/
+
+.Battle {
+    width: 6.35rem;
+    height: 1.525rem;
+    overflow: hidden;
+    position: absolute;
+    top: 5.175rem;
+    left: 5rem;
+    background: url("../images/juezhanzhidian.png") no-repeat 0 0;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    animation-name: test;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+@keyframes test_top3 {
+    from {
+        opacity: 0;
+        top: 0;
+    }
+    to {
+        opacity: 1;
+        top: 6.65rem;
+        left: 2.8rem;
+        z-index:202;
+    }
+}
+.top3 {
+    width: 10.35rem;
+    height: 8.95rem;
+    background: url("../images/top3.png") no-repeat 0 0;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    position: absolute;
+    top: 6.65rem;
+    left: 2.8rem;
+    animation-name: test_top3;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+@keyframes test_content3 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.content3 {
+    width: 6.3rem;
+    height: 3.6rem;
+    position: absolute;
+    top: 7.875rem;
+    left: 4.925rem;
+    background: url("../images/yang.png") no-repeat 0 0;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    animation-name: test_content3;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+@keyframes test_bottom3 {
+    from {
+        top: 8.3rem;
+        opacity: 0;
+    }
+    to {
+        top: 5.3rem;
+        opacity: 1;
+    }
+}
+.bottom3 {
+    width: 10.25rem;
+    height: 8.85rem;
+    background: url("../images/bottom.png") no-repeat 0 0;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    position: absolute;
+    top: 5.3rem;
+    left: 2.925rem;
+    animation-name: test_bottom3;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
